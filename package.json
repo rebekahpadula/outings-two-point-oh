@@ -1,6 +1,6 @@
 {
-  "homepage": "https://rebekahpadula.github.io/outings2.0",
-  "name": "outings2.0",
+  "homepage": "https://rebekahpadula.github.io/outings-two-point-oh",
+  "name": "outings-two-point-oh",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -9,6 +9,7 @@
   "dependencies": {
     "firebase": "^4.9.0",
     "gh-pages": "^1.1.0",
+    "moment": "^2.22.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "styled-components": "^2.1.2"
