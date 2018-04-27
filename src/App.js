@@ -98,24 +98,31 @@ export default class App extends Component {
     let thumbsDownButton = thumbsDown.parentElement;
 
     this.setState((prevState) => {
-      const newSuggestions = prevState.suggestions;
-      let index = -1;
-      for(let i = 0, len = newSuggestions.length; i < len; i++) {
-        if(newSuggestions[i].id === id) {
-          index = i;
-        }
-      }
       if(type === 'up') {
-        newSuggestions[index].upVotes++;
+        console.log(this.state.suggestions);
+        console.log("UP");
       } else if(type === 'down') {
-        newSuggestions[index].downVotes++;
+        console.log("DOWN");
       }
 
-      return {
-        suggestions: newSuggestions
-      };
-    });
+      // old code
+    //   const newSuggestions = prevState.suggestions;
+    //   let index = -1;
+    //   for(let i = 0, len = newSuggestions.length; i < len; i++) {
+    //     if(newSuggestions[i].id === id) {
+    //       index = i;
+    //     }
+    //   }
+    //   if(type === 'up') {
+    //     newSuggestions[index].upVotes++;
+    //   } else if(type === 'down') {
+    //     newSuggestions[index].downVotes++;
+    //   }
 
+    //   return {
+    //     suggestions: newSuggestions
+    //   };
+    });
   }
 
   // lets users log in with facebook
