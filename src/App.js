@@ -92,36 +92,36 @@ export default class App extends Component {
 
   updateVotes(id, type) {
     // setState always sends the previous state to the first param in the function you provide
-    let thumbsUp = document.getElementById('thumbs-up');
-    let thumbsDown = document.getElementById('thumbs-down');
-    let thumbsUpButton = thumbsUp.parentElement;
-    let thumbsDownButton = thumbsDown.parentElement;
+    // let thumbsUp = document.getElementById('thumbs-up');
+    // let thumbsDown = document.getElementById('thumbs-down');
+    // let thumbsUpButton = thumbsUp.parentElement;
+    // let thumbsDownButton = thumbsDown.parentElement;
 
     this.setState((prevState) => {
-      if(type === 'up') {
-        console.log(this.state.suggestions);
-        console.log("UP");
-      } else if(type === 'down') {
-        console.log("DOWN");
-      }
+    //   if(type === 'up') {
+    //     console.log(this.state.suggestions);
+    //     console.log("UP");
+    //   } else if(type === 'down') {
+    //     console.log("DOWN");
+    //   }
 
       // old code
-    //   const newSuggestions = prevState.suggestions;
-    //   let index = -1;
-    //   for(let i = 0, len = newSuggestions.length; i < len; i++) {
-    //     if(newSuggestions[i].id === id) {
-    //       index = i;
-    //     }
-    //   }
-    //   if(type === 'up') {
-    //     newSuggestions[index].upVotes++;
-    //   } else if(type === 'down') {
-    //     newSuggestions[index].downVotes++;
-    //   }
+      const newSuggestions = prevState.suggestions;
+      let index = -1;
+      for(let i = 0, len = newSuggestions.length; i < len; i++) {
+        if(newSuggestions[i].id === id) {
+          index = i;
+        }
+      }
+      if(type === 'up') {
+        newSuggestions[index].upVotes++;
+      } else if(type === 'down') {
+        newSuggestions[index].downVotes++;
+      }
 
-    //   return {
-    //     suggestions: newSuggestions
-    //   };
+      return {
+        suggestions: newSuggestions
+      };
     });
   }
 
